@@ -20,7 +20,7 @@ We describe below how to fully reproduce the figures and tables reported in the 
 
 3.  Generate figures
 
-Set up the software environment (needs to be updated)
+Set up the software environment
 -------------------------------
 
 We developed and tested our analysis pipeline using R running on linux and Mac OSX platforms. The following is a copy of `sessionInfo()` from the development environment in R
