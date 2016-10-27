@@ -2,7 +2,7 @@
 
 Abstract
 --------
-
+Engaging the immune system promises to be key for optimal cancer therapy, especially in hard-to-treat triple-negative breast cancer (TNBC). Using laser capture microdissection-coupled expression profiling, we identify three tumor-associated immune microenvironments with distinct CD8+ T cell localization and outcome. Approximately 25% of TNBCs possess an immunoreactive microenvironment, defined by enhanced infiltration of granzyme B+/CD8+ T cells into the tumor bed and a type I interferon signature. These display elevated expression of multiple immune checkpoint inhibitors but are associated with good outcome. In contrast, TNBCs with an “immune-cold” microenvironment restrict CD8+ T cells to tumor margins, possess elevated expression of the immunosuppressive marker B7-H4, and exhibit signatures of activated stroma and worse outcome. A third immunomodulatory microenvironment, also associated with worse outcome, is enriched for IL-17-producing cells and neutrophils and exhibits stromal localisation of CD8+ T cells and PD-L1. These distinct immune microenvironments have implications for TNBC patient stratification for immunotherapies.
 
 Citation
 --------
