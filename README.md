@@ -56,4 +56,17 @@ all necessary packages have `library(<package>)` calls within the R scripts them
 
 Running R Scripts
 -------------------------------
+1.  CoreDenScripts
+
+"CoreDen-GSEA-BT-IPA.R": Pathway analysis associated with core density phenotype on the bulktumor data, using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
+"CoreDen-IPA-PathwayScores.R": To obtain Metagene Signatures for the Core Density phenotype (Supplementary Figure 9b in the manuscript)
+
+2.  SRIScripts
+
+"SRI-GSEA-BT-IPA.R": Pathway analysis associated with SRI phenotype on bulktumor data using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
+"SRI-IPA-PathwayScores.R": To obtain Metagene Signatures for the SRI phenotype (Supplementary Figure 9c in the manuscript)
+
+3.  KM plot
+
+"KMPlot-Rody.R": Prognostic value of CoreDen-MetaSig1 on the Rody dataset (GSE31519) 
 
