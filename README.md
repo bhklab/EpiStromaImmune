@@ -30,9 +30,6 @@ R version 3.1.3 (2015-03-09)
 Platform: x86_64-apple-darwin13.4.0 (64-bit)
 Running under: OS X 10.10.2 (Yosemite)
 
-locale:
-[1] en_CA.UTF-8/en_CA.UTF-8/en_CA.UTF-8/C/en_CA.UTF-8/en_CA.UTF-8
-
 attached base packages:
 [1] grid      parallel  stats     graphics  grDevices utils     datasets  methods   base     
 
