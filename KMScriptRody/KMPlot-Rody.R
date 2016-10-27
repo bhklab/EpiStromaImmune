@@ -149,11 +149,7 @@ surv.obj <- survfit(Surv(tnbc.surv.complete$fu_120,tnbc.surv.complete$ev120) ~ t
 
 bb <- survdiff(Surv(tnbc.surv.complete$fu_120,tnbc.surv.complete$ev120) ~ tnbc.surv.complete$Class,rho=0) # logrank test
 
-######################################
-#
 # D.index and Concordance Index
-#
-######################################
 
 xx <- scores.tnbc$scores.score
 stime1 <- tnbc.surv$fu_120
@@ -176,54 +172,4 @@ legend(0.5,0.25, legend=sprintf("D Index= %.3f, p value= %.5f",dind$d.index,dind
 legend(0.5,0.20, legend=sprintf("Concordace Index= %.3f, p value= %.5f",conindex$c.index,conindex$p.value),bty="n",cex=0.9,horiz = TRUE)
 dev.off()
 
-######################################
-#
-# D.index for all the 8 metasignatures
-#
-######################################
-
-load('ExpSet-Rody.RData')
-
-sampleinfo <- read.delim("GSE31519_TNBC_SampleInfo.txt", header=T) 
-rownames(sampleinfo) <- sampleinfo$SampleNames
-
-tnbc.pdata <- sampleinfo
-data <- edata2 # eset of Rody
-annot = data.frame(rownames(edata2))
-colnames(annot) <- "EntrezGene.ID"
-rownames(annot) <- rownames(edata2)
-
-# load the signature
-load("../CoreDen-MetaSignatures/Sig1CoreDen.RData")
-load("../CoreDen-MetaSignatures/Sig2CoreDen.RData")
-load("../CoreDen-MetaSignatures/Sig3CoreDen.RData")
-load("../CoreDen-MetaSignatures/Sig4CoreDen.RData")
-load("../SRI-MetaSignatures/Sig1SRI.RData")
-load("../SRI-MetaSignatures/Sig2SRI.RData")
-load("../SRI-MetaSignatures/Sig3SRI.RData")
-load("../SRI-MetaSignatures/Sig4SRI.RData")
-
-g <- list(CDSig1,CDSig2,CDSig3,CDSig4,SRISig1,SRISig2,SRISig3,SRISig4)
-
-for (i in 1:length(g)) {
-  
-  b <- g[[i]]
-  b1 <- as.numeric(+1)
-  x = data.frame(b,b,b1)
-  colnames(x) <- c("probe","EntrezGene.ID","coefficient")
-  x$probe <- as.character(x[,1])
-  x$EntrezGene.ID <- as.character(x[,2])
-  rownames(x) <- b
-  data <- tnbc.scaled.eset
-  annot = data.frame(rownames(data))
-  colnames(annot) <- "EntrezGene.ID"
-  rownames(annot) <- rownames(data)
-  scores <- sig.score(x, t(data), annot,do.mapping=TRUE, signed=TRUE, verbose=TRUE)
-  
-  xx <- scores$score
-  stime1 <- tnbc.surv$fu_120
-  sevent1 <- tnbc.surv$ev120
-  dind <- D.index(x=xx, surv.time=stime1, surv.event=sevent1,na.rm = TRUE)
-  
-  }
 
