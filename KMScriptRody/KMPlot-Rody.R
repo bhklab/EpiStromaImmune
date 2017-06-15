@@ -250,15 +250,3 @@ legend(0.5,0.4, legend=sprintf("p value (Log rank test)= %.9f",1 - pchisq(bb$chi
 dev.off()
 
 
-# Create a table
-FirstSplit <- tnbc.surv1
-secondsplit <- tnbc.surv1
-
-test <- Firstsplit
-test[rownames(tnbc.surv1),7] <- secondsplit$Group
-test <- test[,-c(4,5)]
-colnames(test)[1] <- "Event"
-colnames(test)[2] <- "Time"
-colnames(test)[4] <- "CD1-CD5"
-colnames(test)[5] <- "ED2-ED5"
-write.xlsx2(test,file="/Users/vmanem/Desktop/CD1CD3_ED2ED5.xlsx")
