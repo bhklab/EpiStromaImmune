@@ -59,14 +59,16 @@ Running R Scripts
 CoreDenScripts-
 
 "CoreDen-GSEA-BT-IPA.R": Pathway significantly associated with core density phenotype on the bulktumor data, using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
-"CoreDen-IPA-PathwayScores.R": To obtain Metagene Signatures for the Core Density phenotype (Supplementary Figure 9b in the manuscript)
+"CoreDen-IPA-PathwayScores.R": To obtain Metagene Signatures for the Core Density phenotype
 
-SRIScripts-
+EpiDenScripts-
 
-"SRI-GSEA-BT-IPA.R": Pathway significantly associated with SRI phenotype on bulktumor data using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
-"SRI-IPA-PathwayScores.R": To obtain Metagene Signatures for the SRI phenotype (Supplementary Figure 9c in the manuscript)
+"GSEA-BT-EpiDen-IPA": Pathway significantly associated with SRI phenotype on bulktumor data using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
+"EpiDen-IPA-PathwayScores": To obtain Metagene Signatures for the SRI phenotype
 
 KM plot-
 
-"KMPlot-Rody.R": Prognostic value of CoreDen-MetaSig1 on the Rody dataset (GSE31519) 
+"KMPlot-Rody.R": Prognostic value of combine on the Rody dataset (GSE31519) 
+Step1: Combine Immune and Fibrosis and split the patients by 60H and 40L
+Step2: Combine Interferon and Cholesterol and split by 50H and 50L
 
