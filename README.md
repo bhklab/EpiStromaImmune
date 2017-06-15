@@ -58,7 +58,7 @@ Running R Scripts
 -------------------------------
 CoreDenScripts-
 
-"CoreDen-GSEA-BT-IPA.R": Pathway significantly associated with core density phenotype on the bulktumor data, using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
+"CoreDen-GSEA-BT-IPA.R": Pathway significantly associated with core density phenotype on the bulktumor data, using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package //
 "CoreDen-IPA-PathwayScores.R": To obtain Metagene Signatures for the Core Density phenotype
 
 EpiDenScripts-
