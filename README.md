@@ -72,3 +72,8 @@ KM plot-
 Step1: Combine Immune and Fibrosis and split the patients by 60H and 40L
 Step2: Combine Interferon and Cholesterol and split by 50H and 50L
 
+Kappa statistic-
+
+"Kappa-CDMetasigs.R": This code is used to calculate the Kappa statistic for each metasignature along with the combined Immune+Fibrosis 
+"Kappa-EDMetasigs.R": This code is used to calculate the Kappa statistic for each metasignature along with the combined Colesterol+Interferon 
+
