@@ -1,4 +1,4 @@
-########################################################################
+##########################################################################################
 #
 # Gene Set Enrichment Analysis using IPA pathway annotations
 # QIAGEN’s Ingenuity® Pathway Analysis (IPA, QIAGEN Redwood City, www.qiagen.com/ingenuity
@@ -8,7 +8,7 @@
 # Number of genes = 19700
 # Result: 185 significantly enriched pathways for an FDR < 5%
 #
-########################################################################
+##########################################################################################
 
 library(Biobase)
 library(GEOquery)
