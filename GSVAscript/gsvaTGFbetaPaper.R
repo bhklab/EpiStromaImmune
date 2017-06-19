@@ -110,11 +110,12 @@ pathUsed <- signPATHS$BT
 paths <- intersect(pathUsed, rownames(geneCore2_ss2b$es.obs))
 
 # FOR PAPER FIGURE ----------------
-pdf("GSVA_All-TGFB-AllorderedvF2.pdf", width=8, height=8)
-heatmap.2(geneCore2_ss2b$es.obs[paths, ordSamps], scale="none", labCol=clinical[colnames(M2), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.8, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18),ColSideColors=pal[grp], key.title="", density.info="none")
-legend("topright", legend=levels(grp), fill=pal, title="", cex=0.7)
+ordSamps2 <- intersect(names(colj), colnames(geneCore2_ss2b$es.obs))
+xx= sort(colj[ordSamps2])
+
+pdf("GSVA_All-TGFB-AllorderedvF3_margins.pdf", width=8, height=8)
+heatmap.2(geneCore2_ss2b$es.obs[paths, names(xx)], scale="none", labCol=clinical[names(xx), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.7, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18), key.title="", density.info="none")
 dev.off()
-# --------------------------
 
 
 #-----------------------------------------------------------------
@@ -147,14 +148,15 @@ geneCore2_ss2b <- gsva(M2, GENESETS2, method="gsva",  mx.diff=1, abs.ranking=FAL
 write.csv(geneCore2_ss2b$es.obs[, ordSamps] , "GSVA_All-TGFB-up-and-down-list-only-C2BPnC6_EPI.csv")
 
 # FOR PAPER FIGURE ----------------
-grp <- factor(as.character(clinical[ordSamps, 6]), levels=c("green", "blue", "red"))
 pathUsed <- signPATHS$EPI
 
-pdf("GSVA_All-TGFB-Allordered_EPIvF2.pdf", width=8, height=8)
-heatmap.2(geneCore2_ss2b$es.obs[pathUsed, ordSamps], scale="none", labCol=clinical[colnames(M2), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.8, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18),ColSideColors=pal[grp], key.title="", density.info="none")
-legend("topright", legend=levels(grp), fill=pal, title="", cex=0.7)
+ordSamps2 <- intersect(names(colj), colnames(geneCore2_ss2b$es.obs))
+xx= sort(colj[ordSamps2])
+
+pdf("GSVA_All-TGFB-AllorderedvF3_EPImargins.pdf", width=8, height=8)
+heatmap.2(geneCore2_ss2b$es.obs[pathUsed, names(xx)], scale="none", labCol=clinical[names(xx), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.7, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18), key.title="", density.info="none")
 dev.off()
-# --------------------------
+# ------------
 
 
 #-----------------------------------------------------------------
@@ -189,12 +191,12 @@ pathUsed <- signPATHS$STROMA
 path <- intersect(pathUsed, rownames(geneCore2_ss2b$es.obs))
 
 # FOR PAPER ----------------
-grp <- factor(as.character(clinical[ordSamps, 6]), levels=c("green", "blue", "red"))
+ordSamps2 <- intersect(names(colj), colnames(geneCore2_ss2b$es.obs))
+xx= sort(colj[ordSamps2])
 
-pdf("GSVA_All-TGFB-Allordered_STROMAvF.pdf", width=8, height=8)
-heatmap.2(geneCore2_ss2b$es.obs[path, ordSamps], scale="none", labCol=clinical[colnames(M2), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.8, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18),ColSideColors=pal[grp], key.title="", density.info="none")
-legend("topright", legend=levels(grp), fill=pal, title="", cex=0.7)
+pdf("GSVA_All-TGFB-AllorderedvF3_STROMAmargins.pdf", width=8, height=8)
+heatmap.2(geneCore2_ss2b$es.obs[paths, names(xx)], scale="none", labCol=clinical[names(xx), 1], col=mycol, trace='none', dendrogram="row", Colv=NA, cexRow=0.8, cexCol=0.7, hclustfun=hclust.avl, distfun=corrdist, margins=c(18, 18), key.title="", density.info="none")
 dev.off()
-# --------------------------
+
 
 
