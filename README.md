@@ -63,8 +63,8 @@ CoreDenScripts-
 
 EpiDenScripts-
 
-"GSEA-BT-EpiDen-IPA": Pathway significantly associated with SRI phenotype on bulktumor data using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
-"EpiDen-IPA-PathwayScores": To obtain Metagene Signatures for the SRI phenotype
+"GSEA-BT-EpiDen-IPA": Pathway significantly associated with EpiDen phenotype on bulktumor data using Gene Set Enrichment Analysis (GSEA) as implemented in the Piano R package
+"EpiDen-IPA-PathwayScores": To obtain Metagene Signatures for the EpiDen phenotype
 
 KM plot-
 
